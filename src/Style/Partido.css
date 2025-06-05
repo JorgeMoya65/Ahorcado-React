@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+span button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid black;
+    margin-top: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#alemania:hover {
+    background: linear-gradient(180deg, black 20%, red 50%, yellow 100%);
+    color: white;    
+}
+
+#colombia:hover {
+    background: linear-gradient(180deg, yellow 0%, blue 50%, red 100%);
+    color: white;
+}
+
+#limpiar:hover {
+    background: linear-gradient(145deg,rgba(64, 64, 64, 1) 0%, rgba(130, 130, 130, 0.52) 50%, rgba(196, 196, 196, 1) 100%);
+    color: white;
+}
+
+
+
