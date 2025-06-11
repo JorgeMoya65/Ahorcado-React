@@ -2,6 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@font-face {
+  font-family: "Angel wish";
+  src: url("/fonts/Angel wish.ttf");
+}
+
+@font-face {
+  font-family: "Ruritania";
+  src: url("/fonts/Ruritania.ttf");
 }
 
 html {

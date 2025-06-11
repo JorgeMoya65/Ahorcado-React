@@ -1,21 +1,15 @@
-import React, { useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import "../Style/Ahorcado.css"
+import { ConfigContext } from '../Contexts/ConfigContexts';
 
 function Ahorcado() {
 
-  const [banco, setBanco] = useState(0)
   const refBanco = useRef();
-  const refAudio = useRef();
+  const { banco } = useContext(ConfigContext);
 
-  const chairHandler = () => {
-    if (banco < 36) {
-      setBanco(banco + 4);
-    }
-    if (banco>=32) {
-      refAudio.current.currentTime = 0.6;
-      refAudio.current.play();
-    }
-  }
+  // const [banco, setBanco] = useState(0)
+  // const refAudio = useRef();
+
   return (
     <>
       <div className='Ahorcado'>
@@ -27,9 +21,9 @@ function Ahorcado() {
             src="/images/chair.png"
             alt="Banco" />
         </div>
-        <audio  ref={refAudio} src="/sounds/bone.mp3"></audio>
+        {/* <audio ref={refAudio} src="/sounds/bone.mp3"></audio> */}
       </div>
-      <button onClick={chairHandler} >Rodar{banco}</button>
+      {/* <button onClick={chairHandler} >Rodar{banco}</button> */}
     </>
   )
 }
@@ -37,4 +31,4 @@ function Ahorcado() {
 export default Ahorcado
 
 
-{/* <button onClick={chairHandler} disabled >Rodar{banco}</button> */}
+{/* <button onClick={chairHandler} disabled >Rodar{banco}</button> */ }

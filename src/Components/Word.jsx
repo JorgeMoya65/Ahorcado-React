@@ -1,19 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "../Style/Word.css";
-
-//  asdwfide or
-
-// const letras = "asdwfidet or"
-// const palabra = "Sopa de macaco";
-
-// const [letras, setLetras] = useState([]);
-// const [palabra, setPalabra] = useState([]);
+import { ConfigContext } from "../Contexts/ConfigContexts";
 
 function Word({ configWordContainer }) {
 
+    const { palabra, letras } = useContext(ConfigContext);
+
     const [juego, setJuego] = useState([]);
-    const [letras, setLetras] = useState("onmtpy");
-    const [palabra, setPalabra] = useState("OnOmAtOpEyA");
 
     useEffect(() => {
         const estructura = palabra.split("").map((letra) => {
@@ -23,8 +16,8 @@ function Word({ configWordContainer }) {
             };
         });
         setJuego(estructura);
-        console.log(configWordContainer);
-    }, [configWordContainer]);
+        // console.log(configWordContainer);
+    }, [configWordContainer, letras, palabra]);
     return (
         <ol className="Word"
             style={{
@@ -34,9 +27,7 @@ function Word({ configWordContainer }) {
             }}>
             {juego.map((obj, index) => {
                 return (
-
                     /[a-zA-Z]/.test(obj.letra) ?
-
                         <li key={index}>
                             {obj.conseguida ? obj.letra : "\u00A0"}
                         </li>
@@ -61,12 +52,18 @@ export default Word
 
 // git remote add origin https://github.com/link-del-repositorio.git
 
-// git add . 
-// git commit -m "programacion del sistema configuracion"
-// git push
+// git add .
+// git commit -m "my first commit"
+// git push   o   git push -u origin master
 
 // *gitgnore*
 // node_modules
 // dist
 // dist-ssr
 // *.local
+
+
+// git log --oneline                           ver el historial de commit
+// git checkout "y el numero del commit"       viajar a un commit anterior
+// git checkout master                          para devolver al anterior
+

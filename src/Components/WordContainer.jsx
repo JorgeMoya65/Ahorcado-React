@@ -5,9 +5,7 @@ import "../Style/WordContainer.css"
 import Teclado from "./Teclado";
 import Word from "./Word.jsx";
 
-
 function WordContainer({ configApp }) {
-
 
   return (
     <div className='WordContainer'>
